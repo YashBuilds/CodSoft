@@ -1,0 +1,130 @@
+/* Reset default margins and set base font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  .animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    z-index: -1;
+    animation: gradientShift 15s ease infinite;
+    background-size: 400% 400%;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .header {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .img-section img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info-section h2 {
+    color: #4e54c8;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-section p, .info-section ul {
+    margin-bottom: 1rem;
+  }
+  
+  .info-section ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #fff;
+  }
+  
+  /* Animations */
+  .fade-in-left {
+    animation: fadeLeft 1s ease-out;
+  }
+  
+  .fade-in-right {
+    animation: fadeRight 1s ease-out;
+  }
+  
+  @keyframes fadeLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
